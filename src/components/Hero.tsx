@@ -91,15 +91,13 @@ const Hero = () => {
             className="flex flex-col md:flex-row items-center justify-center gap-8 mb-8"
           >
             {/* Profile Picture */}
-            <motion.div className="w-32 h-32 relative flex-shrink-0">
-              <div className="w-full h-full rounded-full overflow-hidden shadow-2xl relative border-4 border-white/20">
-                {/* Replace this src with your actual profile picture */}
-              
-                <img
-                 src={ChatGPT}
-                  alt="Mohamed Ahmed EL-Nawsany"
-                  className="w-full h-full object-cover"
-                />
+     <motion.div className="w-32 h-32 relative flex-shrink-0">
+  <div className="w-full h-full rounded-full overflow-hidden shadow-2xl relative border-4 border-white/20">
+    <img
+      src={ChatGPT}
+      alt="Mohamed Ahmed EL-Nawsany"
+      className="w-full h-full object-cover"
+    />
                 <motion.div
                   className="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-purple-600/20"
                   animate={{
