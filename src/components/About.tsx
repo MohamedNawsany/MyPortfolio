@@ -168,54 +168,66 @@ const About = () => {
           </motion.div>
         </div>
 
-        <motion.div 
-          className="text-center"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
-          <div className="inline-flex items-center space-x-8 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-full px-8 py-6 shadow-lg">
-            <div className="text-center">
-              <motion.div 
-                className="text-3xl font-bold text-blue-600"
-                initial={{ opacity: 0, scale: 0 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-              >
-                2+
-              </motion.div>
-              <div className="text-sm text-gray-600">Years Experience</div>
-            </div>
-            <div className="w-px h-8 bg-gray-300"></div>
-            <div className="text-center">
-              <motion.div 
-                className="text-3xl font-bold text-blue-600"
-                initial={{ opacity: 0, scale: 0 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-              >
-                10+
-              </motion.div>
-              <div className="text-sm text-gray-600">Projects Completed</div>
-            </div>
-            <div className="w-px h-8 bg-gray-300"></div>
-            <div className="text-center">
-              <motion.div 
-                className="text-3xl font-bold text-blue-600"
-                initial={{ opacity: 0, scale: 0 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.5 }}
-              >
-                98%
-              </motion.div>
-              <div className="text-sm text-gray-600">Client Satisfaction</div>
-            </div>
-          </div>
-        </motion.div>
+<motion.div 
+  className="text-center"
+  initial={{ opacity: 0, y: 30 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.6, delay: 0.2 }}
+>
+  <div className="flex justify-center items-center bg-gradient-to-r from-blue-50 to-indigo-50 rounded-full px-4 sm:px-8 py-6 shadow-lg max-w-full overflow-hidden">
+    
+    {/* Years Experience */}
+    <div className="text-center mx-2 sm:mx-4">
+      <motion.div 
+        className="text-3xl font-bold text-blue-600"
+        initial={{ opacity: 0, scale: 0 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: 0.3 }}
+      >
+        2+
+      </motion.div>
+      <div className="text-sm text-gray-600">Years Experience</div>
+    </div>
+
+    {/* Separator */}
+    <div className="w-px h-8 bg-gray-300 mx-2 sm:mx-4"></div>
+
+    {/* Projects Completed */}
+    <div className="text-center mx-2 sm:mx-4">
+      <motion.div 
+        className="text-3xl font-bold text-blue-600"
+        initial={{ opacity: 0, scale: 0 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: 0.4 }}
+      >
+        10+
+      </motion.div>
+      <div className="text-sm text-gray-600">Projects Completed</div>
+    </div>
+
+    {/* Separator */}
+    <div className="w-px h-8 bg-gray-300 mx-2 sm:mx-4"></div>
+
+    {/* Client Satisfaction */}
+    <div className="text-center mx-2 sm:mx-4">
+      <motion.div 
+        className="text-3xl font-bold text-blue-600"
+        initial={{ opacity: 0, scale: 0 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: 0.5 }}
+      >
+        98%
+      </motion.div>
+      <div className="text-sm text-gray-600">Client Satisfaction</div>
+    </div>
+
+  </div>
+</motion.div>
+
       </div>
     </section>
   );

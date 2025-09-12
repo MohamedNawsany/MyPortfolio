@@ -206,34 +206,35 @@ const Hero = () => {
             ))}
           </motion.div>
           
-          {/* CTA Buttons */}
-          <motion.div 
-            variants={itemVariants}
-            className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
-          >
-            <motion.button
-              onClick={scrollToAbout}
-              className="px-8 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
-              whileHover={{ scale: 1.05, y: -2 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Learn More About Me
-            </motion.button>
-            <motion.a
-              href="#contact"
-              onClick={(e) => {
-                e.preventDefault();
-                document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
-              }}
-              className="px-8 py-3 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 flex items-center justify-center gap-2"
-              whileHover={{ scale: 1.05, y: -2 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Download className="w-5 h-5" />
-              Download CV
-            </motion.a>
-          </motion.div>
-        </motion.div>
+
+   {/* CTA Buttons */}
+<motion.div 
+  variants={itemVariants}
+  className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
+>
+  {/* Learn More About Me */}
+  <motion.button
+    onClick={scrollToAbout}
+    className="px-8 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-blue-50 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+    whileHover={{ scale: 1.05, y: -2 }}
+    whileTap={{ scale: 0.95 }}
+  >
+    Learn More About Me
+  </motion.button>
+
+  {/* Download CV */}
+  <motion.a
+    href="/Mohamed_Nawsany_CV.pdf"  // <-- link to your PDF in the public folder
+    download                        // <-- ensures it triggers a download
+    className="px-8 py-3 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 flex items-center justify-center gap-2"
+    whileHover={{ scale: 1.05, y: -2 }}
+    whileTap={{ scale: 0.95 }}
+  >
+    <Download className="w-5 h-5" />
+    Download CV
+  </motion.a>
+</motion.div>
+
       </div>
       
       {/* Scroll Indicator */}
