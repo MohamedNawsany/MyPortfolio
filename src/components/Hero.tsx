@@ -165,7 +165,7 @@ const Hero = () => {
               Learn More About Me
             </motion.button>
 <motion.a
-href="Mohamed_Ahmed_EL_Nawsany.pdf"
+href="Mohamed_Nawsany_CV.pdf"
   download
   className="px-8 py-3 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 flex items-center justify-center gap-2"
   whileHover={{ scale: 1.05, y: -2 }}
