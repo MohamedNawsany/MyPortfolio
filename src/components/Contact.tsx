@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, Github, Linkedin, MessageCircle, CheckCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
-
+import emailjs from 'emailjs-com';
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -18,22 +18,41 @@ const Contact = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  setIsSubmitting(true);
+
+  try {
+    const result = await emailjs.send(
+      'service_tswe9m9',       // Your EmailJS Service ID
+      'template_ymk3015',       // Your EmailJS Template ID
+      {
+        from_name: formData.name,
+        from_email: formData.email,
+        subject: formData.subject,
+        message: formData.message
+      },
+      'ASxp7pvo-Ju6g1B9r'    // Your EmailJS Public Key (User ID)
+    );
+
+    console.log(result.text);
     setIsSubmitted(true);
     setIsSubmitting(false);
-    
+
     // Reset form after showing success message
     setTimeout(() => {
       setFormData({ name: '', email: '', subject: '', message: '' });
       setIsSubmitted(false);
     }, 3000);
-  };
+
+  } catch (error) {
+    console.error('Failed to send email:', error);
+    setIsSubmitting(false);
+    alert('Failed to send message. Please try again later.');
+  }
+};
+
+
 
   const contactInfo = [
     {
@@ -51,8 +70,8 @@ const Contact = () => {
     {
       icon: <MapPin className="w-6 h-6" />,
       title: "Location",
-      value: "Cairo, Egypt",
-      link: "https://maps.google.com/?q=Cairo,Egypt"
+  value: "Alexandria, Egypt",
+link: "https://www.google.com/maps/place/Alexandria,+Egypt"
     }
   ];
 

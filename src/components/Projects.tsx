@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 const Projects = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
+      title: "LocallyCo E-commerce Platform",
       description: "A full-stack e-commerce solution with real-time inventory management, payment processing, and admin dashboard.",
       image: "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800",
       technologies: ["React", "Node.js", "MongoDB", "Stripe API", "Socket.io"],
@@ -14,7 +14,7 @@ const Projects = () => {
       featured: true
     },
     {
-      title: "Task Management App",
+      title: "Internship Tracker App",
       description: "A collaborative task management application with real-time updates, file sharing, and team communication features.",
       image: "https://images.pexels.com/photos/3184306/pexels-photo-3184306.jpeg?auto=compress&cs=tinysrgb&w=800",
       technologies: ["Vue.js", "Express.js", "PostgreSQL", "Socket.io"],
@@ -32,7 +32,7 @@ const Projects = () => {
       featured: false
     },
     {
-      title: "Social Media Dashboard",
+      title: "Fokir Website",
       description: "Analytics dashboard for social media management with data visualization, scheduling tools, and performance metrics.",
       image: "https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=800",
       technologies: ["Next.js", "Python", "FastAPI", "Chart.js", "Redis"],
@@ -41,7 +41,7 @@ const Projects = () => {
       featured: false
     },
     {
-      title: "Learning Management System",
+      title: "Gaming API Website",
       description: "Educational platform with course management, progress tracking, and interactive learning modules for students and instructors.",
       image: "https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=800",
       technologies: ["React", "Node.js", "MongoDB", "JWT", "AWS S3"],

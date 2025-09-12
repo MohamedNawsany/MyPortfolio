@@ -1,7 +1,7 @@
 import React from 'react';
 import { ChevronDown, Github, Linkedin, Mail, Download } from 'lucide-react';
 import { motion } from 'framer-motion';
-
+import ChatGPT from './ChatGPT.png'; 
 const Hero = () => {
   const scrollToAbout = () => {
     document.querySelector('#about')?.scrollIntoView({ behavior: 'smooth' });
@@ -94,8 +94,9 @@ const Hero = () => {
             <motion.div className="w-32 h-32 relative flex-shrink-0">
               <div className="w-full h-full rounded-full overflow-hidden shadow-2xl relative border-4 border-white/20">
                 {/* Replace this src with your actual profile picture */}
+              
                 <img
-                  src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400"
+                 src={ChatGPT}
                   alt="Mohamed Ahmed EL-Nawsany"
                   className="w-full h-full object-cover"
                 />
@@ -150,7 +151,7 @@ const Hero = () => {
             variants={itemVariants}
             className="text-xl md:text-2xl text-blue-100 mb-4"
           >
-            Senior Software Engineer
+            Junior Software Engineer
           </motion.p>
 
           <motion.p 
@@ -158,7 +159,7 @@ const Hero = () => {
             className="text-lg text-blue-200/80 mb-8 max-w-2xl mx-auto"
           >
             Passionate about creating innovative solutions and building scalable applications
-            with 3+ years of experience in full-stack development
+            with 2+ years of experience in full-stack development
           </motion.p>
           
           {/* Stats */}
@@ -167,15 +168,15 @@ const Hero = () => {
             className="flex justify-center space-x-8 mb-10"
           >
             <div className="text-center">
-              <div className="text-3xl font-bold text-white">3+</div>
+              <div className="text-3xl font-bold text-white">2+</div>
               <div className="text-sm text-blue-200">Years Experience</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-white">50+</div>
+              <div className="text-3xl font-bold text-white">10+</div>
               <div className="text-sm text-blue-200">Projects Completed</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-white">100%</div>
+              <div className="text-3xl font-bold text-white">98%</div>
               <div className="text-sm text-blue-200">Client Satisfaction</div>
             </div>
           </motion.div>

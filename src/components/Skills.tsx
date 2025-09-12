@@ -7,36 +7,31 @@ const Skills = () => {
       title: "Frontend Development",
       color: "from-blue-500 to-blue-600",
       skills: [
-        { name: "React", level: 90 },
-        { name: "JavaScript/TypeScript", level: 95 },
         { name: "HTML/CSS", level: 95 },
-        { name: "Vue.js", level: 80 },
-        { name: "Next.js", level: 85 },
-        { name: "Tailwind CSS", level: 90 }
+        { name: "JavaScript/TypeScript", level: 90 },
+        { name: "React", level: 75 },
+        { name: "Bootstrap", level: 85 }
+       
       ]
     },
     {
       title: "Backend Development",
       color: "from-green-500 to-green-600",
       skills: [
-        { name: "Node.js", level: 85 },
-        { name: "Python", level: 80 },
-        { name: "Express.js", level: 85 },
-        { name: "FastAPI", level: 75 },
-        { name: "REST APIs", level: 90 },
-        { name: "GraphQL", level: 70 }
+        { name: ".NET Core", level: 80 },
+        { name: "Python", level: 85 },
+        { name: "Java", level: 95 },
+        { name: "C#", level: 85 },
+        { name: "REST APIs", level: 70 }
       ]
     },
     {
       title: "Database & Cloud",
       color: "from-purple-500 to-purple-600",
       skills: [
-        { name: "MongoDB", level: 85 },
-        { name: "PostgreSQL", level: 80 },
-        { name: "MySQL", level: 80 },
-        { name: "AWS", level: 75 },
-        { name: "Docker", level: 70 },
-        { name: "Firebase", level: 85 }
+        { name: "TSQL", level: 90 },
+        { name: "MySQL", level: 85 },
+        { name: "Docker", level: 65 }
       ]
     },
     {
@@ -45,10 +40,8 @@ const Skills = () => {
       skills: [
         { name: "Git/GitHub", level: 95 },
         { name: "VS Code", level: 95 },
-        { name: "Figma", level: 75 },
         { name: "Agile/Scrum", level: 85 },
-        { name: "Testing", level: 80 },
-        { name: "CI/CD", level: 75 }
+        { name: "Testing with Pytest", level: 80 }
       ]
     }
   ];
@@ -159,9 +152,9 @@ const Skills = () => {
             viewport={{ once: true }}
           >
             {[
-              'React', 'TypeScript', 'Node.js', 'Python', 'MongoDB', 'PostgreSQL',
-              'AWS', 'Docker', 'Git', 'Figma', 'Next.js', 'Express.js',
-              'Tailwind CSS', 'Firebase', 'GraphQL', 'REST APIs'
+              'React', 'TypeScript', 'Python', 'T-SQL', 'HTML5', 'CSS3',
+               'Docker', 'Git', 'jQuery', 'javascript', 'java',
+              'Tailwind CSS', '.NET Core', 'C#', 'REST APIs'
             ].map((tech, index) => (
               <motion.span
                 key={index}

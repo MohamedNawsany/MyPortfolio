@@ -77,7 +77,7 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Get In Touch</h4>
             <div className="space-y-2 text-gray-400 mb-6">
               <p>dnawasany@gmail.com</p>
-              <p>Cairo, Egypt</p>
+              <p>Alexandria, Egypt</p>
             </div>
             <div className="flex space-x-4">
               <motion.a

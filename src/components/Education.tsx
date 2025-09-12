@@ -3,47 +3,47 @@ import { GraduationCap, Award, Calendar, Star, Trophy } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Education = () => {
-  const education = [
-    {
-      degree: "Bachelor of Computer Science",
-      institution: "Cairo University",
-      location: "Cairo, Egypt",
-      period: "2017 - 2021",
-      description: "Specialized in Software Engineering with focus on web development and database systems.",
-      achievements: ["Graduated with Honors", "Dean's List 2019-2021", "Best Final Project Award"]
-    }
-  ];
+const education = [
+  {
+    degree: "B.Eng. in Computer & Communication Engineering",
+    institution: "Faculty of Engineering, Alexandria University",
+    location: "Alexandria, Egypt",
+    period: "2022 - 2027",
+    description: "Specialized in Software Engineering with focus on web development and database systems.",
+    achievements: [ // ✅ Add this field
+      "1st Place in Tawwar W Ghayer Programming Competition",
+      "SQL Fundamentals Certification from New Horizons",
+      "Completed Java SE and .NET Full-Stack training"
+    ]
+  }
+];
 
-  const certifications = [
-    {
-      title: "AWS Certified Solutions Architect",
-      issuer: "Amazon Web Services",
-      date: "2023",
-      credentialId: "AWS-CSA-2023",
-      level: "Professional"
-    },
-    {
-      title: "React Developer Certification",
-      issuer: "Meta",
-      date: "2022",
-      credentialId: "META-RDC-2022",
-      level: "Professional"
-    },
-    {
-      title: "Full Stack Web Development",
-      issuer: "freeCodeCamp",
-      date: "2021",
-      credentialId: "FCC-FSWD-2021",
-      level: "Intermediate"
-    },
-    {
-      title: "JavaScript Algorithms and Data Structures",
-      issuer: "freeCodeCamp",
-      date: "2021",
-      credentialId: "FCC-JSADS-2021",
-      level: "Intermediate"
-    }
-  ];
+const certifications = [
+  {
+    title: "Forward Program",
+    issuer: "McKinsey & Company",
+    date: "2024",
+    credentialId: "MCK-FWD-2024",
+    level: "Professional"
+  },
+
+  {
+    title: "SQL Fundamentals Certification",
+    issuer: "New Horizons",
+    date: "2024",
+    credentialId: "NH-SQL-2024",
+    level: "Fundamental"
+  },
+  {
+    title: "Java SE Certification",
+    issuer: "New Horizons",
+    date: "2024",
+    credentialId: "NH-JAVA-2024",
+    level: "Intermediate"
+  }
+];
+
+
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -135,21 +135,21 @@ const Education = () => {
                     <Star className="w-4 h-4 text-yellow-500 mr-2" />
                     Achievements:
                   </h5>
-                  <ul className="space-y-2">
-                    {edu.achievements.map((achievement, achievementIndex) => (
-                      <motion.li 
-                        key={achievementIndex} 
-                        className="text-gray-700 flex items-start"
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.5, delay: achievementIndex * 0.1 }}
-                      >
-                        <Trophy className="w-4 h-4 text-yellow-500 mt-0.5 mr-3 flex-shrink-0" />
-                        {achievement}
-                      </motion.li>
-                    ))}
-                  </ul>
+        <ul className="space-y-2">
+  {edu.achievements.length > 0 && (
+    <motion.li 
+      key={0} 
+      className="text-gray-700 flex items-start"
+      initial={{ opacity: 0, x: -20 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+    >
+      <Trophy className="w-4 h-4 text-yellow-500 mt-0.5 mr-3 flex-shrink-0" />
+      {edu.achievements[0]}
+    </motion.li>
+  )}
+</ul>
                 </div>
               </motion.div>
             ))}
@@ -219,7 +219,7 @@ const Education = () => {
           transition={{ duration: 0.6 }}
         >
           <h3 className="text-2xl font-semibold text-gray-900 mb-8">
-            Continuous Learning
+            Endless Learning
           </h3>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
             I believe in lifelong learning and staying updated with the latest technologies. 

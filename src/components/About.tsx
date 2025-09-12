@@ -29,18 +29,18 @@ const About = () => {
   const achievements = [
     {
       icon: <Award className="w-6 h-6" />,
-      title: "Dean's List",
-      description: "2019-2021"
+      title: "Best Performer in DEPI",
+      description: "2024-2025"
     },
     {
       icon: <Target className="w-6 h-6" />,
-      title: "Best Final Project",
-      description: "Cairo University"
+      title: "Best Project",
+      description: "Ministry of Youth and Sports"
     },
     {
       icon: <Heart className="w-6 h-6" />,
-      title: "Graduated with Honors",
-      description: "Computer Science"
+      title: "Best Student",
+      description: "E.B.S High School"
     }
   ];
 
@@ -93,17 +93,14 @@ const About = () => {
             transition={{ duration: 0.6 }}
           >
             <p className="text-lg text-gray-700 leading-relaxed">
-              I'm Mohamed Ahmed EL-Nawsany, a dedicated software engineer from Cairo, Egypt, 
+              I'm Mohamed Ahmed EL-Nawsany, a dedicated software engineer from Alexandria, Egypt, 
               with a passion for building innovative solutions that solve real-world problems. 
-              With 3+ years of experience and expertise in modern web technologies, I strive to create 
+              With 2+ years of experience and expertise in modern web technologies, I strive to create 
               applications that are both functional and beautiful.
             </p>
             
             <p className="text-lg text-gray-700 leading-relaxed">
-              My journey began with a Bachelor's degree in Computer Science from Cairo University, 
-              where I graduated with honors. Since then, I've worked with companies ranging from 
-              startups to established tech firms, gaining experience in full-stack development, 
-              cloud technologies, and agile methodologies.
+             I'm currently pursuing a Bachelor's degree in Computer and Communications Engineering at Alexandria University. My journey into tech has been fueled by a passion for software development and continuous learning. I've already gained hands-on experience through internships, personal projects, and collaborations, focusing on full-stack development, cloud technologies, and agile methodologies.
             </p>
             
             <p className="text-lg text-gray-700 leading-relaxed">
@@ -187,7 +184,7 @@ const About = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.3 }}
               >
-                3+
+                2+
               </motion.div>
               <div className="text-sm text-gray-600">Years Experience</div>
             </div>
@@ -200,7 +197,7 @@ const About = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.4 }}
               >
-                50+
+                10+
               </motion.div>
               <div className="text-sm text-gray-600">Projects Completed</div>
             </div>
@@ -213,7 +210,7 @@ const About = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.5 }}
               >
-                100%
+                98%
               </motion.div>
               <div className="text-sm text-gray-600">Client Satisfaction</div>
             </div>
