@@ -164,17 +164,16 @@ const Hero = () => {
             >
               Learn More About Me
             </motion.button>
-
-            <motion.a
-              href="Mohamed_Nawsany_CV.pdf"
-              download
-              className="px-8 py-3 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 flex items-center justify-center gap-2"
-              whileHover={{ scale: 1.05, y: -2 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Download className="w-5 h-5" />
-              Download CV
-            </motion.a>
+<motion.a
+  href="Mohamed Ahmed EL-Nawsany.pdf"
+  download
+  className="px-8 py-3 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 flex items-center justify-center gap-2"
+  whileHover={{ scale: 1.05, y: -2 }}
+  whileTap={{ scale: 0.95 }}
+>
+  <Download className="w-5 h-5" />
+  Download CV
+</motion.a>
           </motion.div>
 
           {/* Scroll Indicator */}
