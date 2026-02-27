@@ -85,13 +85,13 @@ export default function Hero() {
             className="flex flex-col md:flex-row items-center justify-center gap-8 mb-8"
           >
             {/* Profile Picture */}
-            <motion.div className="w-32 h-32 relative flex-shrink-0">
+            <motion.div className="w-64 h-64 relative flex-shrink-0">
               <div className="w-full h-full rounded-full overflow-hidden shadow-2xl relative border-4 border-white/20">
                 <Image
-                  src="/ChatGPT.png"
+                  src="/minstry.jpg"
                   alt="Mohamed Ahmed EL-Nawsany"
-                  width={128}
-                  height={128}
+                  width={500}
+                  height={500}
                   className="w-full h-full object-cover"
                 />
                 <motion.div
