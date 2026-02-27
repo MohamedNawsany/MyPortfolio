@@ -1,41 +1,33 @@
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
+import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { Inter } from 'next/font/google';
-import { locales } from '@/i18n/request';
+import { routing } from '@/i18n/routing';
 import '../globals.css';
 
 const inter = Inter({ subsets: ['latin', 'latin-ext'] });
 
 export function generateStaticParams() {
-  return locales.map((locale) => ({ locale }));
+  return routing.locales.map((locale) => ({ locale }));
 }
 
-export async function generateMetadata({
-  params: { locale }
-}: {
-  params: { locale: string };
-}) {
+type Props = { children: React.ReactNode; params: Promise<{ locale: string }> };
+
+export async function generateMetadata({ params }: Props) {
+  const { locale } = await params;
   return {
     title: 'Mohamed Ahmed EL-Nawsany - Software Engineer Portfolio',
     description: 'Portfolio of Mohamed Ahmed EL-Nawsany, a passionate software engineer with 2+ years of experience in full-stack development',
   };
 }
 
-export default async function LocaleLayout({
-  children,
-  params: { locale }
-}: {
-  children: React.ReactNode;
-  params: { locale: string };
-}) {
-  // Ensure that the incoming `locale` is valid
-  if (!locales.includes(locale as any)) {
+export default async function LocaleLayout({ children, params }: Props) {
+  const { locale } = await params;
+  if (!(routing.locales as readonly string[]).includes(locale)) {
     notFound();
   }
+  setRequestLocale(locale);
 
-  // Providing all messages to the client
-  // side is the easiest way to get started
   const messages = await getMessages();
 
   return (

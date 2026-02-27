@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { Mail, Phone, MapPin, Send, Github, Linkedin, MessageCircle, CheckCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 import { SectionContainer } from '@/components/templates/SectionContainer';
 import { Heading, Paragraph } from '@/components/atoms/Typography';
 import { Input, TextArea } from '@/components/atoms/Input';

@@ -6,7 +6,6 @@ const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['images.pexels.com'],
     remotePatterns: [
       {
         protocol: 'https',
