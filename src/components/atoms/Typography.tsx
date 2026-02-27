@@ -34,7 +34,7 @@ export const Heading = ({
   };
 
   return (
-    <Component className={`${variantClasses[variant]} ${className}`}>
+    <Component className={`${variantClasses[variant as HeadingVariant]} ${className}`}>
       {children}
     </Component>
   );
