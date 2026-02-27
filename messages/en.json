@@ -1,0 +1,130 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "experience": "Experience",
+    "projects": "Projects",
+    "education": "Education",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Mohamed Ahmed",
+    "subtitle": "EL-Nawsany",
+    "role": "Junior Software Engineer",
+    "description": "Passionate about creating innovative solutions and building scalable applications with 2+ years of experience in full-stack development",
+    "yearsExperience": "Years Experience",
+    "projectsCompleted": "Projects Completed",
+    "clientSatisfaction": "Client Satisfaction",
+    "learnMore": "Learn More About Me",
+    "downloadCV": "Download CV"
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "I'm a passionate software engineer with a love for creating meaningful digital experiences",
+    "paragraph1": "I'm Mohamed Ahmed EL-Nawsany, a dedicated software engineer from Alexandria, Egypt, with a passion for building innovative solutions that solve real-world problems. With 2+ years of experience and expertise in modern web technologies, I strive to create applications that are both functional and beautiful.",
+    "paragraph2": "I'm currently pursuing a Bachelor's degree in Computer and Communications Engineering at Alexandria University. My journey into tech has been fueled by a passion for software development and continuous learning. I've already gained hands-on experience through internships, personal projects, and collaborations, focusing on full-stack development, cloud technologies, and agile methodologies.",
+    "paragraph3": "When I'm not coding, I enjoy exploring new technologies, contributing to open-source projects, and sharing knowledge with the developer community. I'm always excited to take on new challenges and collaborate on interesting projects.",
+    "highlights": {
+      "cleanCode": {
+        "title": "Clean Code",
+        "description": "Writing maintainable, scalable, and efficient code with best practices"
+      },
+      "fullStack": {
+        "title": "Full-Stack",
+        "description": "End-to-end development from frontend to backend and deployment"
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "Always exploring new technologies and creative solutions"
+      },
+      "collaboration": {
+        "title": "Collaboration",
+        "description": "Strong team player with excellent communication skills"
+      }
+    },
+    "achievements": {
+      "depi": {
+        "title": "Best Performer in DEPI",
+        "description": "2024-2025"
+      },
+      "project": {
+        "title": "Best Project",
+        "description": "Ministry of Youth and Sports"
+      },
+      "student": {
+        "title": "Best Student",
+        "description": "E.B.S High School"
+      }
+    }
+  },
+  "skills": {
+    "title": "Skills & Technologies",
+    "subtitle": "A comprehensive overview of my technical expertise and proficiency levels",
+    "categories": {
+      "frontend": "Frontend Development",
+      "backend": "Backend Development",
+      "database": "Database & Cloud",
+      "tools": "Tools & Others"
+    },
+    "technologies": "Technologies I Work With"
+  },
+  "experience": {
+    "title": "Work Experience",
+    "subtitle": "My professional journey and the roles that have shaped my expertise"
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "subtitle": "A showcase of my recent work and personal projects that demonstrate my skills and creativity",
+    "otherProjects": "Other Notable Projects",
+    "viewMore": "View More on GitHub",
+    "code": "Code",
+    "liveDemo": "Live Demo"
+  },
+  "education": {
+    "title": "Education & Certifications",
+    "subtitle": "My academic background and professional certifications that support my expertise",
+    "education": "Education",
+    "certifications": "Certifications",
+    "achievements": "Achievements",
+    "endlessLearning": {
+      "title": "Endless Learning",
+      "description": "I believe in lifelong learning and staying updated with the latest technologies. I regularly participate in online courses, workshops, and tech conferences to enhance my skills and knowledge."
+    }
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Have a project in mind or want to collaborate? I'd love to hear from you. Let's create something amazing together!",
+    "letsConnect": "Let's Connect",
+    "followMe": "Follow Me",
+    "available": {
+      "title": "Currently Available",
+      "description": "I'm currently open to new opportunities and exciting projects. Whether it's a full-time position, freelance work, or collaboration, I'm always interested in discussing innovative ideas.",
+      "status": "Available for work"
+    },
+    "sendMessage": "Send Me a Message",
+    "fullName": "Full Name",
+    "email": "Email Address",
+    "subject": "Subject",
+    "message": "Message",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "sent": "Message Sent!",
+    "placeholders": {
+      "name": "Your full name",
+      "email": "your.email@example.com",
+      "subject": "What's this about?",
+      "message": "Tell me about your project or idea..."
+    }
+  },
+  "footer": {
+    "description": "Senior Software Engineer passionate about creating innovative solutions and building scalable applications.",
+    "tagline": "Always learning, always growing.",
+    "quickLinks": "Quick Links",
+    "getInTouch": "Get In Touch",
+    "madeWith": "Made with",
+    "and": "and",
+    "by": "by Mohamed EL-Nawsany",
+    "rights": "All rights reserved."
+  }
+}
