@@ -1,5 +1,14 @@
 import { ReactNode } from 'react';
 
+type HeadingVariant = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+
+interface HeadingProps {
+  children: ReactNode;
+  variant?: HeadingVariant;
+  className?: string;
+  as?: HeadingVariant;
+}
+
 interface TypographyProps {
   children: ReactNode;
   variant?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span';
@@ -12,10 +21,10 @@ export const Heading = ({
   variant = 'h2', 
   className = '',
   as,
-}: TypographyProps) => {
+}: HeadingProps) => {
   const Component = as || variant;
   
-  const variantClasses = {
+  const variantClasses: Record<HeadingVariant, string> = {
     h1: 'text-4xl md:text-6xl font-bold',
     h2: 'text-3xl md:text-4xl font-bold',
     h3: 'text-2xl font-semibold',
@@ -30,6 +39,7 @@ export const Heading = ({
     </Component>
   );
 };
+
 
 export const Paragraph = ({ 
   children, 
