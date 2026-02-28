@@ -48,8 +48,8 @@ export default function Hero() {
       className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20"
     >
       {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-800">
-        <div className="absolute inset-0 bg-black/20"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 via-blue-500 to-indigo-600">
+        <div className="absolute inset-0 "></div>
         <motion.div
           className="absolute inset-0 opacity-30"
           animate={{ backgroundPosition: ['0% 0%', '100% 100%'] }}
@@ -85,27 +85,21 @@ export default function Hero() {
             className="flex flex-col md:flex-row items-center justify-center gap-8 mb-8"
           >
             {/* Profile Picture */}
-            <motion.div className="w-64 h-64 relative flex-shrink-0">
-              <div className="w-full h-full  overflow-hidden shadow-2xl relative border-4 border-white/20">
-                <Image
-                  src="/minstry.jpg"
-                  alt="Mohamed Ahmed EL-Nawsany"
-                  fill
-                  className="w-full h-full object-cover"
-                />
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-purple-600/20"
-                  animate={{ opacity: [0.2, 0.4, 0.2] }}
-                  transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-                />
-              </div>
-              <motion.div
-                className="absolute -inset-2 bg-gradient-to-br from-blue-400 to-purple-600 rounded-full opacity-20 blur-xl"
-                animate={{ scale: [1, 1.1, 1], opacity: [0.2, 0.3, 0.2] }}
-                transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-              />
-            </motion.div>
-
+        <motion.div
+  className="w-80 h-80 relative flex-shrink-0"
+  animate={{ y: [0, -15, 0] }} // floating up & down
+  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+>
+  <div className="w-full h-full overflow-hidden shadow-2xl relative rounded-3xl border border-white/20 backdrop-blur-md">
+    
+    <Image
+      src="/minstry.jpg"
+      alt="Mohamed Ahmed EL-Nawsany"
+      fill
+      className="w-full h-full object-cover rounded-3xl"
+    />
+  </div>
+</motion.div>
             {/* Name */}
             <div className="text-center md:text-left">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
