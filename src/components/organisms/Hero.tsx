@@ -86,7 +86,7 @@ export default function Hero() {
           >
             {/* Profile Picture */}
             <motion.div className="w-64 h-64 relative flex-shrink-0">
-              <div className="w-full h-full rounded-full overflow-hidden shadow-2xl relative border-4 border-white/20">
+              <div className="w-full h-full  overflow-hidden shadow-2xl relative border-4 border-white/20">
                 <Image
                   src="/minstry.jpg"
                   alt="Mohamed Ahmed EL-Nawsany"

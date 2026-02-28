@@ -12,8 +12,8 @@ export const LanguageSwitcher = () => {
   const router = useRouter();
 
   const languages = [
-    { code: 'en' as Locale, label: 'English', flag: '🇬🇧' },
-    { code: 'ar' as Locale, label: 'العربية', flag: '🇸🇦' },
+    { code: 'en' as Locale, label: 'English', },
+    { code: 'ar' as Locale, label: 'العربية', },
   ];
 
   const switchLocale = (newLocale: Locale) => {
@@ -29,7 +29,7 @@ export const LanguageSwitcher = () => {
       >
         <Globe className="w-4 h-4" />
         <span className="text-sm font-medium">
-          {languages.find(lang => lang.code === locale)?.flag} {languages.find(lang => lang.code === locale)?.label}
+          {languages.find(lang => lang.code === locale)?.label}
         </span>
       </motion.button>
       
@@ -38,7 +38,7 @@ export const LanguageSwitcher = () => {
           <motion.button
             key={lang.code}
             onClick={() => switchLocale(lang.code)}
-            className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-100 transition-colors duration-200 flex items-center gap-2 ${
+            className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-100  rounded-lg  transition-colors duration-200 flex items-center gap-2 ${
               locale === lang.code ? 'bg-blue-50 text-blue-600 font-medium' : 'text-gray-700'
             }`}
             whileHover={{ x: 4 }}
