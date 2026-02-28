@@ -85,19 +85,30 @@ export default function Hero() {
             className="flex flex-col md:flex-row items-center justify-center gap-8 mb-8"
           >
             {/* Profile Picture */}
-        <motion.div
+<motion.div
   className="w-80 h-80 relative flex-shrink-0"
-  animate={{ y: [0, -15, 0] }} // floating up & down
+  animate={{ y: [0, -10, 0] }}
   transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
 >
-  <div className="w-full h-full overflow-hidden shadow-2xl relative rounded-3xl border border-white/20 backdrop-blur-md">
+  {/* OUTER GLOW */}
+  <div className="absolute -inset-2 rounded-3xl bg-white/20 blur-xl opacity-70"></div>
+
+  {/* MAIN BOX */}
+  <div className="relative w-full h-full rounded-3xl p-[2px] bg-white/40">
     
-    <Image
-      src="/minstry.jpg"
-      alt="Mohamed Ahmed EL-Nawsany"
-      fill
-      className="w-full h-full object-cover rounded-3xl"
-    />
+    {/* INNER CONTAINER */}
+    <div className="w-full h-full overflow-hidden rounded-3xl bg-black/10 backdrop-blur-sm shadow-2xl">
+      
+      <Image
+        src="/minstry.jpg"
+        alt="Mohamed Ahmed EL-Nawsany"
+        fill
+        quality={100}
+        priority
+        className="object-cover rounded-3xl"
+      />
+      
+    </div>
   </div>
 </motion.div>
             {/* Name */}
@@ -105,7 +116,7 @@ export default function Hero() {
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
                 {t('title')}
                 <motion.span
-                  className="block text-blue-300"
+                  className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-600"
                   animate={{ color: ['rgb(147,197,253)', 'rgb(196,181,253)', 'rgb(147,197,253)'] }}
                   transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
                 >
