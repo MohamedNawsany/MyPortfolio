@@ -15,8 +15,9 @@ const skillCategories: SkillCategory[] = [
     skills: [
       { name: "HTML/CSS", level: 95 },
       { name: "JavaScript/TypeScript", level: 90 },
-      { name: "React", level: 75 },
-      { name: "Bootstrap", level: 85 }
+      { name: "React", level: 85 },
+      { name: "Bootstrap", level: 85 },
+{ name: "Tailwind CSS", level: 80 }
     ]
   },
   {
@@ -27,14 +28,13 @@ const skillCategories: SkillCategory[] = [
       { name: "Python", level: 85 },
       { name: "Java", level: 95 },
       { name: "C#", level: 85 },
-      { name: "REST APIs", level: 70 }
     ]
   },
   {
     title: "Database & Cloud",
     color: "from-purple-500 to-purple-600",
     skills: [
-      { name: "TSQL", level: 90 },
+      { name: "T-SQL", level: 90 },
       { name: "MySQL", level: 85 },
       { name: "Docker", level: 65 }
     ]
@@ -54,7 +54,7 @@ const skillCategories: SkillCategory[] = [
 const technologies = [
   'React', 'TypeScript', 'Python', 'T-SQL', 'HTML5', 'CSS3',
   'Docker', 'Git', 'jQuery', 'javascript', 'java',
-  'Tailwind CSS', '.NET Core', 'C#', 'REST APIs'
+  'Tailwind CSS', '.NET Core', 'C#'
 ];
 
 export default function Skills() {

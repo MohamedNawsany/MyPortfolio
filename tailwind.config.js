@@ -8,7 +8,10 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'sans': ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['Inter', 'system-ui', 'sans-serif'], 
+        atma: ['Atma', 'cursive'],
+        lato: ['Lato', 'sans-serif'],
+        playwrite: ['"Playwrite CZ"', 'cursive'],
       },
       colors: {
         primary: {

@@ -113,10 +113,10 @@ export default function Hero() {
 </motion.div>
             {/* Name */}
             <div className="text-center md:text-left">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 from-neutral-200 ">
                 {t('title')}
                 <motion.span
-                  className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-600"
+                  className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-600 font-playwrite"
                   animate={{ color: ['rgb(147,197,253)', 'rgb(196,181,253)', 'rgb(147,197,253)'] }}
                   transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
                 >
