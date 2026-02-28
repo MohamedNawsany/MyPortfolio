@@ -90,8 +90,7 @@ export default function Hero() {
                 <Image
                   src="/minstry.jpg"
                   alt="Mohamed Ahmed EL-Nawsany"
-                  width={500}
-                  height={500}
+                  fill
                   className="w-full h-full object-cover"
                 />
                 <motion.div
