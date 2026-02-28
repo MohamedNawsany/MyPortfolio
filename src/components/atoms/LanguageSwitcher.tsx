@@ -43,7 +43,6 @@ export const LanguageSwitcher = () => {
             }`}
             whileHover={{ x: 4 }}
           >
-            <span>{lang.flag}</span>
             <span>{lang.label}</span>
           </motion.button>
         ))}
