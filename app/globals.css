@@ -83,7 +83,9 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: #2563eb;
 }
-
+.text-outline-white {
+  -webkit-text-stroke: 2px rgb(230, 236, 254);
+}
 /* Focus styles */
 button:focus,
 input:focus,
