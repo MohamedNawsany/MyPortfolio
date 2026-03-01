@@ -34,10 +34,34 @@ const projects: Project[] = [
     image: "https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=800",
     technologies: ["React", "OpenWeather API", "Chart.js", "Tailwind CSS"],
     githubUrl: "https://github.com/MohamedNawsany",
-    liveUrl: "#",
+    liveUrl: "https://restaurant-simple-website.vercel.app/",
     featured: false
   },
   {
+    title: "Restaurant simple website",
+    description: "A responsive restaurant website with a user-friendly interface and a visually appealing design.",
+    image: "https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=800",
+    technologies: ["HTML5", "CSS3", "JavaScript"],
+    githubUrl: "https://github.com/MohamedNawsany/Restaurant-simple-website",
+    liveUrl: "https://restaurant-simple-website.vercel.app/",
+    featured: false
+  },  {
+    title: "Fokir Website",
+    description: "Portfolio template for web developers and designers with a clean and modern design.",
+    image: "https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=800",
+    technologies: ["HTML5", "CSS3", "JavaScript"],
+    githubUrl: "https://github.com/MohamedNawsany/Fokir",
+    liveUrl: "https://fokir-weld-ten.vercel.app/",
+    featured: false
+  },  {
+    title: "Fokir Website",
+    description: "Analytics dashboard for social media management with data visualization, scheduling tools, and performance metrics.",
+    image: "https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=800",
+    technologies: ["Next.js", "Python", "FastAPI", "Chart.js", "Redis"],
+    githubUrl: "https://github.com/MohamedNawsany",
+    liveUrl: "#",
+    featured: false
+  },  {
     title: "Fokir Website",
     description: "Analytics dashboard for social media management with data visualization, scheduling tools, and performance metrics.",
     image: "https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=800",

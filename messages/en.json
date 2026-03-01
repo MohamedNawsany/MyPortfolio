@@ -22,9 +22,9 @@
   "about": {
     "title": "About Me",
     "subtitle": "I'm a passionate software engineer with a love for creating meaningful digital experiences",
-    "paragraph1": "I'm Mohamed Ahmed EL-Nawsany, a dedicated software engineer from Alexandria, Egypt, with a passion for building innovative solutions that solve real-world problems. With 2+ years of experience and expertise in modern web technologies, I strive to create applications that are both functional and beautiful.",
-    "paragraph2": "I'm currently pursuing a Bachelor's degree in Computer and Communications Engineering at Alexandria University. My journey into tech has been fueled by a passion for software development and continuous learning. I've already gained hands-on experience through internships, personal projects, and collaborations, focusing on full-stack development, cloud technologies, and agile methodologies.",
-    "paragraph3": "When I'm not coding, I enjoy exploring new technologies, contributing to open-source projects, and sharing knowledge with the developer community. I'm always excited to take on new challenges and collaborate on interesting projects.",
+    "paragraph1": "I'm Mohamed Ahmed EL-Nawsany, a software engineer from Alexandria, Egypt, with a passion for building innovative solutions that solve real-world problems. With 2+ years of experience and expertise in modern web technologies, I create applications that are both functional and user-friendly.",
+    "paragraph2": "I'm currently pursuing a Bachelor's degree in Computer and Communications Engineering at Alexandria National University. My journey into tech has been fueled by a passion for software development and continuous learning. I've already gained a deep experience through internships, personal projects, and collaborations, focusing on full-stack development, and agile methodologies.",
+    "paragraph3": "When I'm not coding, I enjoy exploring new technologies, contributing to projects, and sharing knowledge with the developers community. I'm always excited to take on new challenges and collaborate on interesting projects.",
     "highlights": {
       "cleanCode": {
         "title": "Clean Code",
@@ -40,7 +40,7 @@
       },
       "collaboration": {
         "title": "Collaboration",
-        "description": "Strong team player with excellent communication skills"
+        "description": "Strong team player with excellent communication, proficiency in Agile workflows and Git Flow."
       }
     },
     "achievements": {
