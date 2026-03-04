@@ -6,8 +6,8 @@ import { SectionContainer } from '@/components/templates/SectionContainer';
 import { Heading, Paragraph } from '@/components/atoms/Typography';
 import { EducationCard } from '@/components/molecules/EducationCard';
 import { CertificationCard } from '@/components/molecules/CertificationCard';
-import { Education as EducationType, Certification } from '@/types';
-import { containerVariants, itemVariants } from '@/lib/animations';
+import type { Education as EducationType, Certification } from '@/domain/entities';
+import { containerVariants, itemVariants } from '@/presentation/lib/animations';
 
 const education: EducationType[] = [
   {
@@ -50,7 +50,7 @@ const certifications: Certification[] = [
 
 export default function Education() {
   return (
-    <SectionContainer id="education" bgColor="white">
+    <SectionContainer id="education" bgColor="white" className="dark:bg-gray-800">
       <motion.div 
         className="text-center mb-16"
         initial={{ opacity: 0, y: 30 }}
@@ -58,10 +58,10 @@ export default function Education() {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <Heading variant="h2" className="text-gray-900 mb-4">
+        <Heading variant="h2" className="text-gray-900 dark:text-white mb-4">
           Education & Certifications
         </Heading>
-        <Paragraph className="max-w-2xl mx-auto">
+        <Paragraph className="max-w-2xl mx-auto text-gray-600 dark:text-gray-300">
           My academic background and professional certifications that support my expertise
         </Paragraph>
       </motion.div>
@@ -78,8 +78,8 @@ export default function Education() {
             className="flex items-center mb-8"
             variants={itemVariants}
           >
-            <GraduationCap className="w-6 h-6 text-blue-600 mr-3" />
-            <h3 className="text-2xl font-semibold text-gray-900">Education</h3>
+            <GraduationCap className="w-6 h-6 text-blue-600 dark:text-blue-400 mr-3" />
+            <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">Education</h3>
           </motion.div>
           
           {education.map((edu, index) => (
@@ -98,8 +98,8 @@ export default function Education() {
             className="flex items-center mb-8"
             variants={itemVariants}
           >
-            <Award className="w-6 h-6 text-blue-600 mr-3" />
-            <h3 className="text-2xl font-semibold text-gray-900">Certifications</h3>
+            <Award className="w-6 h-6 text-blue-600 dark:text-blue-400 mr-3" />
+            <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">Certifications</h3>
           </motion.div>
           
           <div className="space-y-4">
@@ -118,10 +118,10 @@ export default function Education() {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <h3 className="text-2xl font-semibold text-gray-900 mb-8">
+        <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-8">
           Endless Learning
         </h3>
-        <Paragraph className="max-w-3xl mx-auto mb-8">
+        <Paragraph className="max-w-3xl mx-auto mb-8 text-gray-600 dark:text-gray-300">
           I believe in lifelong learning and staying updated with the latest technologies. 
           I regularly participate in online courses, workshops, and tech conferences to 
           enhance my skills and knowledge.

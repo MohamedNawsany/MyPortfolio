@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { SocialLink as SocialLinkType } from '@/types';
+import type { SocialLink as SocialLinkType } from '@/domain/entities';
 
 interface SocialLinkProps {
   social: SocialLinkType;

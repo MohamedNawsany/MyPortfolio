@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { scrollToSection } from '@/hooks/useScroll';
+import { scrollToSection } from '@/application/hooks/useScroll';
 
 interface NavItemProps {
   href: string;

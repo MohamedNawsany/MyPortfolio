@@ -17,11 +17,11 @@ export const Badge = ({
   whileHover,
 }: BadgeProps) => {
   const variantClasses = {
-    default: 'bg-gray-100 text-gray-700',
-    primary: 'bg-blue-50 text-blue-700',
-    success: 'bg-green-100 text-green-700',
-    warning: 'bg-yellow-100 text-yellow-700',
-    info: 'bg-blue-100 text-blue-700',
+    default: 'bg-gray-100 dark:bg-gray-600 text-gray-700 dark:text-gray-200',
+    primary: 'bg-blue-50 dark:bg-blue-900/50 text-blue-700 dark:text-blue-200',
+    success: 'bg-green-100 dark:bg-green-900/50 text-green-700 dark:text-green-200',
+    warning: 'bg-yellow-100 dark:bg-yellow-900/50 text-yellow-700 dark:text-yellow-200',
+    info: 'bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-200',
   };
 
   return (

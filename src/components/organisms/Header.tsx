@@ -3,10 +3,11 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { useScroll, scrollToSection } from '@/hooks/useScroll';
-import { getNavItems } from '@/constants/navigation';
+import { useScroll, scrollToSection } from '@/application/hooks/useScroll';
+import { getNavItems } from '@/application/services/navigation.service';
 import { NavItem } from '@/components/molecules/NavItem';
 import { LanguageSwitcher } from '@/components/atoms/LanguageSwitcher';
+import { ThemeToggle } from '@/components/atoms/ThemeToggle';
 import { useTranslations } from 'next-intl';
 
 export default function Header() {
@@ -19,7 +20,7 @@ export default function Header() {
     <motion.header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-100' 
+          ? 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-lg border-b border-gray-100 dark:border-gray-800' 
           : 'bg-transparent'
       }`}
       initial={{ y: -100 }}
@@ -34,7 +35,7 @@ export default function Header() {
             transition={{ type: "spring", stiffness: 400, damping: 17 }}
           >
             <h1 className={`text-xl font-bold transition-colors duration-300 ${
-              isScrolled ? 'text-blue-600' : 'text-white'
+              isScrolled ? 'text-blue-600 dark:text-blue-400' : 'text-white'
             }`}>
               Mohamed EL-Nawsany
             </h1>
@@ -52,16 +53,18 @@ export default function Header() {
                   index={index}
                 />
               ))}
-              <LanguageSwitcher />
+              <ThemeToggle isScrolled={isScrolled} />
+              <LanguageSwitcher isScrolled={isScrolled} />
             </div>
           </div>
 
-          {/* Mobile menu button */}
-          <div className="md:hidden">
+          {/* Mobile menu button + theme */}
+          <div className="md:hidden flex items-center gap-1">
+            <ThemeToggle isScrolled={isScrolled} />
             <motion.button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className={`transition-colors duration-200 ${
-                isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-blue-200'
+                isScrolled ? 'text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400' : 'text-white hover:text-blue-200'
               }`}
               whileTap={{ scale: 0.95 }}
             >
@@ -80,7 +83,7 @@ export default function Header() {
           }}
           transition={{ duration: 0.3 }}
         >
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white shadow-lg rounded-lg mt-2">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white dark:bg-gray-800 shadow-lg rounded-lg mt-2">
             {navItems.map((item, index) => (
               <motion.button
                 key={item.href}
@@ -88,7 +91,7 @@ export default function Header() {
                   scrollToSection(item.href);
                   setIsMenuOpen(false);
                 }}
-                className="text-gray-700 hover:text-blue-600 hover:bg-blue-50 block px-3 py-2 rounded-md text-base font-medium w-full text-left transition-all duration-200"
+                className="text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-gray-700 block px-3 py-2 rounded-md text-base font-medium w-full text-left transition-all duration-200"
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.3, delay: index * 0.05 }}

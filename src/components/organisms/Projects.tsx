@@ -5,8 +5,8 @@ import { motion } from 'framer-motion';
 import { SectionContainer } from '@/components/templates/SectionContainer';
 import { Heading, Paragraph } from '@/components/atoms/Typography';
 import { ProjectCard } from '@/components/molecules/ProjectCard';
-import { Project } from '@/types';
-import { containerVariants } from '@/lib/animations';
+import type { Project } from '@/domain/entities';
+import { containerVariants } from '@/presentation/lib/animations';
 import { Button } from '@/components/atoms/Button';
 
 const projects: Project[] = [
@@ -32,9 +32,9 @@ const projects: Project[] = [
     title: "Weather Dashboard",
     description: "A responsive weather application with location-based forecasts, interactive maps, and personalized weather alerts.",
     image: "https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=800",
-    technologies: ["React", "OpenWeather API", "Chart.js", "Tailwind CSS"],
-    githubUrl: "https://github.com/MohamedNawsany",
-    liveUrl: "https://restaurant-simple-website.vercel.app/",
+    technologies: ["HTML5", "CSS3", "OpenWeather API", "JavaScript"],
+    githubUrl: "https://github.com/MohamedNawsany/Weather-API",
+    liveUrl: "https://weather-api-plum-pi.vercel.app/",
     featured: false
   },
   {
@@ -54,15 +54,15 @@ const projects: Project[] = [
     liveUrl: "https://fokir-weld-ten.vercel.app/",
     featured: false
   },  {
-    title: "Fokir Website",
+    title: "Gaming Website",
     description: "Analytics dashboard for social media management with data visualization, scheduling tools, and performance metrics.",
     image: "https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=800",
     technologies: ["Next.js", "Python", "FastAPI", "Chart.js", "Redis"],
-    githubUrl: "https://github.com/MohamedNawsany",
-    liveUrl: "#",
+    githubUrl: "https://github.com/MohamedNawsany/Gaming-API-website",
+    liveUrl: "https://gaming-api-website-pi.vercel.app/",
     featured: false
   },  {
-    title: "Fokir Website",
+    title: "Bakery Website",
     description: "Analytics dashboard for social media management with data visualization, scheduling tools, and performance metrics.",
     image: "https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=800",
     technologies: ["Next.js", "Python", "FastAPI", "Chart.js", "Redis"],
@@ -71,7 +71,7 @@ const projects: Project[] = [
     featured: false
   },
   {
-    title: "Gaming API Website",
+    title: "Agency Website",
     description: "Educational platform with course management, progress tracking, and interactive learning modules for students and instructors.",
     image: "https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=800",
     technologies: ["React", "Node.js", "MongoDB", "JWT", "AWS S3"],
@@ -86,7 +86,7 @@ export default function Projects() {
   const otherProjects = projects.filter(project => !project.featured);
 
   return (
-    <SectionContainer id="projects" bgColor="gray">
+    <SectionContainer id="projects" bgColor="gray" className="dark:bg-gray-800">
       <motion.div 
         className="text-center mb-16"
         initial={{ opacity: 0, y: 30 }}
@@ -94,10 +94,10 @@ export default function Projects() {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <Heading variant="h2" className="text-gray-900 mb-4">
+        <Heading variant="h2" className="text-gray-900 dark:text-white mb-4">
           Featured Projects
         </Heading>
-        <Paragraph className="max-w-2xl mx-auto">
+        <Paragraph className="max-w-2xl mx-auto text-gray-600 dark:text-gray-300">
           A showcase of my recent work and personal projects that demonstrate my skills and creativity
         </Paragraph>
       </motion.div>
@@ -118,7 +118,7 @@ export default function Projects() {
       {/* Other Projects */}
       <div>
         <motion.h3 
-          className="text-2xl font-semibold text-gray-900 mb-8 text-center"
+          className="text-2xl font-semibold text-gray-900 dark:text-white mb-8 text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -150,7 +150,7 @@ export default function Projects() {
           href="https://github.com/MohamedNawsany"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center space-x-2 px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors duration-300"
+          className="inline-flex items-center space-x-2 px-6 py-3 bg-gray-900 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-800 dark:hover:bg-gray-600 transition-colors duration-300 border border-transparent dark:border-gray-600"
           whileHover={{ scale: 1.05, y: -2 }}
           whileTap={{ scale: 0.95 }}
         >

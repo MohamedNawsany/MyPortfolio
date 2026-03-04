@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Skill } from '@/types';
+import type { Skill } from '@/domain/entities';
 
 interface SkillItemProps {
   skill: Skill;

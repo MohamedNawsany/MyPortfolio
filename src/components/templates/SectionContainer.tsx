@@ -14,8 +14,8 @@ export const SectionContainer = ({
   bgColor = 'white',
 }: SectionContainerProps) => {
   const bgClasses = {
-    white: 'bg-white',
-    gray: 'bg-gray-50',
+    white: 'bg-white dark:bg-gray-900',
+    gray: 'bg-gray-50 dark:bg-gray-900/50',
   };
 
   return (

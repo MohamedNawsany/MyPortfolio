@@ -4,8 +4,8 @@ import { motion } from 'framer-motion';
 import { SectionContainer } from '@/components/templates/SectionContainer';
 import { Heading, Paragraph } from '@/components/atoms/Typography';
 import { ExperienceCard } from '@/components/molecules/ExperienceCard';
-import { Experience as ExperienceType } from '@/types';
-import { containerVariants } from '@/lib/animations';
+import type { Experience as ExperienceType } from '@/domain/entities';
+import { containerVariants } from '@/presentation/lib/animations';
 
 const experiences: ExperienceType[] = [
   {
@@ -51,7 +51,7 @@ const experiences: ExperienceType[] = [
 
 export default function Experience() {
   return (
-    <SectionContainer id="experience" bgColor="white">
+    <SectionContainer id="experience" bgColor="white" className="dark:bg-gray-800">
       <motion.div 
         className="text-center mb-16"
         initial={{ opacity: 0, y: 30 }}
@@ -59,10 +59,10 @@ export default function Experience() {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <Heading variant="h2" className="text-gray-900 mb-4">
+        <Heading variant="h2" className="text-gray-900 dark:text-white mb-4">
           Work Experience
         </Heading>
-        <Paragraph className="max-w-2xl mx-auto">
+        <Paragraph className="max-w-2xl mx-auto text-gray-600 dark:text-gray-300">
           My professional journey and the roles that have shaped my expertise
         </Paragraph>
       </motion.div>
@@ -70,7 +70,7 @@ export default function Experience() {
       <div className="relative">
         {/* Timeline line */}
         <motion.div 
-          className="absolute left-4 md:left-1/2 transform md:-translate-x-px top-0 h-full w-0.5 bg-gradient-to-b from-blue-500 to-indigo-600"
+          className="absolute left-4 md:left-1/2 transform md:-translate-x-px top-0 h-full w-0.5 bg-gradient-to-b from-blue-500 to-indigo-600 dark:from-blue-400 dark:to-indigo-400"
           initial={{ height: 0 }}
           whileInView={{ height: "100%" }}
           viewport={{ once: true }}

@@ -4,11 +4,11 @@ import { ChevronDown, Github, Linkedin, Mail, Download } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-import { scrollToSection } from '@/hooks/useScroll';
+import { scrollToSection } from '@/application/hooks/useScroll';
 import { Button } from '@/components/atoms/Button';
 import { StatCard } from '@/components/molecules/StatCard';
 import { SocialLinksGroup } from '@/components/molecules/SocialLink';
-import { SocialLink as SocialLinkType } from '@/types';
+import type { SocialLink as SocialLinkType } from '@/domain/entities';
 
 const socialLinks: SocialLinkType[] = [
   { icon: <Github className="w-6 h-6" />, title: 'GitHub', url: 'https://github.com/MohamedNawsany', color: 'hover:text-gray-900' },
@@ -47,11 +47,11 @@ export default function Hero() {
       id="home"
       className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20"
     >
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 via-blue-500 to-indigo-600">
-        <div className="absolute inset-0 "></div>
+      {/* Animated Background - blue in light, dark in dark mode */}
+      <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 via-blue-500 to-indigo-600 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950">
+        <div className="absolute inset-0 dark:bg-gray-900/40" />
         <motion.div
-          className="absolute inset-0 opacity-30"
+          className="absolute inset-0 opacity-30 dark:opacity-20"
           animate={{ backgroundPosition: ['0% 0%', '100% 100%'] }}
           transition={{
             duration: 20,
@@ -67,12 +67,12 @@ export default function Hero() {
 
       {/* Floating Elements */}
       <motion.div
-        className="absolute top-20 left-10 w-4 h-4 bg-white/20 rounded-full"
+        className="absolute top-20 left-10 w-4 h-4 bg-white/20 dark:bg-white/10 rounded-full"
         animate={{ y: [0, -20, 0], x: [0, 10, 0] }}
         transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
       />
       <motion.div
-        className="absolute top-40 right-20 w-6 h-6 bg-white/10 rounded-full"
+        className="absolute top-40 right-20 w-6 h-6 bg-white/10 dark:bg-white/5 rounded-full"
         animate={{ y: [0, 20, 0], x: [0, -15, 0] }}
         transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
       />
@@ -126,11 +126,11 @@ export default function Hero() {
             </div>
           </motion.div>
 
-          <motion.p variants={itemVariants} className="text-xl md:text-2xl text-blue-100 mb-4">
+          <motion.p variants={itemVariants} className="text-xl md:text-2xl text-blue-100 dark:text-gray-300 mb-4">
             {t('role')}
           </motion.p>
 
-          <motion.p variants={itemVariants} className="text-lg text-blue-200/80 mb-8 max-w-2xl mx-auto">
+          <motion.p variants={itemVariants} className="text-lg text-blue-200/80 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
             {t('description')}
           </motion.p>
 

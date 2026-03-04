@@ -6,8 +6,8 @@ import { useTranslations } from 'next-intl';
 import { SectionContainer } from '@/components/templates/SectionContainer';
 import { Heading, Paragraph } from '@/components/atoms/Typography';
 import { AchievementCard } from '@/components/molecules/AchievementCard';
-import { Achievement } from '@/types';
-import { containerVariants, itemVariants } from '@/lib/animations';
+import type { Achievement } from '@/domain/entities';
+import { containerVariants, itemVariants } from '@/presentation/lib/animations';
 
 export default function About() {
   const t = useTranslations('about');
@@ -61,10 +61,10 @@ export default function About() {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <Heading variant="h2" className="text-gray-900 mb-4">
+        <Heading variant="h2" className="text-gray-900 dark:text-white mb-4">
           {t('title')}
         </Heading>
-        <Paragraph className="max-w-2xl mx-auto">
+        <Paragraph className="max-w-2xl mx-auto text-gray-600 dark:text-gray-300">
           {t('subtitle')}
         </Paragraph>
       </motion.div>
@@ -77,15 +77,15 @@ export default function About() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <Paragraph className="text-gray-700 leading-relaxed">
+          <Paragraph className="text-gray-700 dark:text-gray-300 leading-relaxed">
             {t('paragraph1')}
           </Paragraph>
           
-          <Paragraph className="text-gray-700 leading-relaxed">
+          <Paragraph className="text-gray-700 dark:text-gray-300 leading-relaxed">
             {t('paragraph2')}
           </Paragraph>
           
-          <Paragraph className="text-gray-700 leading-relaxed">
+          <Paragraph className="text-gray-700 dark:text-gray-300 leading-relaxed">
             {t('paragraph3')}
           </Paragraph>
 
@@ -113,20 +113,15 @@ export default function About() {
             <motion.div
               key={index}
               variants={itemVariants}
-              className="p-6 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-blue-100"
-              whileHover={{ scale: 1.05 }}
+              className="p-6 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-800 rounded-xl hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-blue-100 dark:border-gray-700"
             >
-              <motion.div 
-                className="text-blue-600 mb-4"
-                whileHover={{ rotate: 360 }}
-                transition={{ duration: 0.6 }}
-              >
+              <div className="text-blue-600 dark:text-blue-400 mb-4">
                 {item.icon}
-              </motion.div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
                 {item.title}
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 dark:text-gray-300">
                 {item.description}
               </p>
             </motion.div>
@@ -141,7 +136,7 @@ export default function About() {
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.2 }}
       >
-        <div className="flex justify-center items-center bg-gradient-to-r from-blue-50 to-indigo-50 rounded-full px-4 sm:px-8 py-6 shadow-lg max-w-full overflow-hidden">
+        <div className="flex justify-center items-center bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-800 rounded-full px-4 sm:px-8 py-6 shadow-lg max-w-full overflow-hidden border border-gray-200 dark:border-gray-700">
           <motion.div 
             className="text-center mx-2 sm:mx-4"
             initial={{ opacity: 0, scale: 0 }}
@@ -149,11 +144,11 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <div className="text-3xl font-bold text-blue-600">2+</div>
-            <div className="text-sm text-gray-600">Years Experience</div>
+            <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">2+</div>
+            <div className="text-sm text-gray-600 dark:text-gray-400">Years Experience</div>
           </motion.div>
 
-          <div className="w-px h-8 bg-gray-300 mx-2 sm:mx-4"></div>
+          <div className="w-px h-8 bg-gray-300 dark:bg-gray-600 mx-2 sm:mx-4"></div>
 
           <motion.div 
             className="text-center mx-2 sm:mx-4"
@@ -162,11 +157,11 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <div className="text-3xl font-bold text-blue-600">10+</div>
-            <div className="text-sm text-gray-600">Projects Completed</div>
+            <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">10+</div>
+            <div className="text-sm text-gray-600 dark:text-gray-400">Projects Completed</div>
           </motion.div>
 
-          <div className="w-px h-8 bg-gray-300 mx-2 sm:mx-4"></div>
+          <div className="w-px h-8 bg-gray-300 dark:bg-gray-600 mx-2 sm:mx-4"></div>
 
           <motion.div 
             className="text-center mx-2 sm:mx-4"
@@ -175,8 +170,8 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.5 }}
           >
-            <div className="text-3xl font-bold text-blue-600">98%</div>
-            <div className="text-sm text-gray-600">Client Satisfaction</div>
+            <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">98%</div>
+            <div className="text-sm text-gray-600 dark:text-gray-400">Client Satisfaction</div>
           </motion.div>
         </div>
       </motion.div>

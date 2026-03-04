@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { ExternalLink, MapPin, Briefcase } from 'lucide-react';
-import { Experience } from '@/types';
+import type { Experience } from '@/domain/entities';
 import { Badge } from '@/components/atoms/Badge';
 
 interface ExperienceCardProps {
@@ -23,7 +23,7 @@ export const ExperienceCard = ({ experience, index }: ExperienceCardProps) => {
     >
       {/* Timeline dot */}
       <motion.div 
-        className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 bg-blue-600 rounded-full border-4 border-white shadow-lg z-10"
+        className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 bg-blue-600 dark:bg-blue-500 rounded-full border-4 border-white dark:border-gray-800 shadow-lg z-10"
         initial={{ scale: 0 }}
         whileInView={{ scale: 1 }}
         viewport={{ once: true }}
@@ -36,27 +36,27 @@ export const ExperienceCard = ({ experience, index }: ExperienceCardProps) => {
         index % 2 === 0 ? 'md:pr-12' : 'md:pl-12'
       }`}>
         <motion.div 
-          className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 relative"
+          className="bg-white dark:bg-gray-700/50 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-600 relative"
           whileHover={{ y: -5, scale: 1.02 }}
         >
           {/* Company icon */}
-          <div className="absolute -top-3 right-6 w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
+          <div className="absolute -top-3 right-6 w-8 h-8 bg-blue-600 dark:bg-blue-500 rounded-full flex items-center justify-center">
             <Briefcase className="w-4 h-4 text-white" />
           </div>
 
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
-            <h3 className="text-xl font-semibold text-gray-900">
+            <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
               {experience.title}
             </h3>
             <Badge variant="primary">{experience.period}</Badge>
           </div>
           
-          <div className="flex items-center text-gray-600 mb-2">
+          <div className="flex items-center text-gray-600 dark:text-gray-300 mb-2">
             <ExternalLink className="w-4 h-4 mr-2" />
             <span className="font-medium">{experience.company}</span>
           </div>
           
-          <div className="flex items-center text-gray-500 mb-4">
+          <div className="flex items-center text-gray-500 dark:text-gray-400 mb-4">
             <MapPin className="w-4 h-4 mr-2" />
             <span>{experience.location}</span>
           </div>
@@ -65,7 +65,7 @@ export const ExperienceCard = ({ experience, index }: ExperienceCardProps) => {
             {experience.description.map((item, itemIndex) => (
               <motion.li 
                 key={itemIndex} 
-                className="text-gray-700 flex items-start"
+                className="text-gray-700 dark:text-gray-300 flex items-start"
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}

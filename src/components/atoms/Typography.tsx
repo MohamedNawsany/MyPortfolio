@@ -49,7 +49,7 @@ export const Paragraph = ({
   const Component = as;
   
   return (
-    <Component className={`text-lg text-gray-600 ${className}`}>
+    <Component className={`text-lg text-gray-600 dark:text-gray-300 ${className}`}>
       {children}
     </Component>
   );
@@ -61,7 +61,7 @@ export const Label = ({
   htmlFor,
 }: { children: ReactNode; className?: string; htmlFor?: string }) => {
   return (
-    <label htmlFor={htmlFor} className={`block text-sm font-medium text-gray-700 ${className}`}>
+    <label htmlFor={htmlFor} className={`block text-sm font-medium text-gray-700 dark:text-gray-300 ${className}`}>
       {children}
     </label>
   );

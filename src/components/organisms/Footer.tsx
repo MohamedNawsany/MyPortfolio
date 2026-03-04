@@ -3,8 +3,8 @@
 import { Heart, Code, ArrowUp } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
-import { scrollToSection, scrollToTop } from '@/hooks/useScroll';
-import { getNavItems } from '@/constants/navigation';
+import { scrollToSection, scrollToTop } from '@/application/hooks/useScroll';
+import { getNavItems } from '@/application/services/navigation.service';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
