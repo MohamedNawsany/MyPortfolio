@@ -11,21 +11,21 @@ import { Button } from '@/components/atoms/Button';
 
 const projects: Project[] = [
   {
-    title: "LocallyCo E-commerce Platform",
+    title: "Ozyra E-commerce Platform",
     description: "A full-stack e-commerce solution with real-time inventory management, payment processing, and admin dashboard.",
-    image: "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800",
-    technologies: ["React", "Node.js", "MongoDB", "Stripe API", "Socket.io"],
-    githubUrl: "https://github.com/MohamedNawsany",
-    liveUrl: "#",
+    image: "/ozyra.png",
+    technologies: ["React", "Node.js", "postgreSQL", "Stripe API", "Next.js"],
+    githubUrl: "https://github.com/ozyra-eg",
+    liveUrl: "https://ozyra.netlify.app/",
     featured: true
   },
   {
-    title: "Internship Tracker App",
-    description: "A collaborative task management application with real-time updates, file sharing, and team communication features.",
-    image: "https://images.pexels.com/photos/3184306/pexels-photo-3184306.jpeg?auto=compress&cs=tinysrgb&w=800",
-    technologies: ["Vue.js", "Express.js", "PostgreSQL", "Socket.io"],
-    githubUrl: "https://github.com/MohamedNawsany",
-    liveUrl: "#",
+    title: "Library website",
+    description: "A modern digital library platform built with Next.js and React, allowing users to browse, search, and explore books through a fast, responsive, and user-friendly interface",
+    image: "/library.png",
+    technologies: ["Next.js", "React", "JavaScript", "tailwindcss","database"],
+    githubUrl: "https://github.com/MohamedNawsany/Library-website",
+    liveUrl: "https://library-website-nine.vercel.app/",
     featured: true
   },
   {
