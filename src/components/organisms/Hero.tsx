@@ -129,17 +129,17 @@ export default function Hero() {
           <motion.p variants={itemVariants} className="text-xl md:text-2xl text-blue-100 dark:text-gray-300 mb-4">
             {t('role')}
           </motion.p>
-
+{/*
           <motion.p variants={itemVariants} className="text-lg text-blue-200/80 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
             {t('description')}
-          </motion.p>
+          </motion.p>}
 
           {/* Stats */}
-          <motion.div variants={itemVariants} className="flex justify-center space-x-8 mb-10">
-            <StatCard value="2+" label={t('yearsExperience')} delay={0.3} />
+         { /*<motion.div variants={itemVariants} className="flex justify-center space-x-8 mb-10">
+            <StatCard value="1+" label={t('yearsExperience')} delay={0.3} />
             <StatCard value="10+" label={t('projectsCompleted')} delay={0.4} />
             <StatCard value="98%" label={t('clientSatisfaction')} delay={0.5} />
-          </motion.div>
+          </motion.div>*/}
 
           {/* Social Links */}
           <motion.div variants={itemVariants} className="mb-12">
