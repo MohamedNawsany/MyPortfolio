@@ -14,7 +14,7 @@ const projects: Project[] = [
     title: "Ozyra E-commerce Platform",
     description: "A full-stack e-commerce solution with real-time inventory management, payment processing, and admin dashboard.",
     image: "/ozyra.png",
-    technologies: ["React", "Node.js", "postgreSQL", "Stripe API", "Next.js"],
+    technologies: ["React", "Node.js", "postgreSQL", " API", "Next.js"],
     githubUrl: "https://github.com/ozyra-eg",
     liveUrl: "https://ozyra.netlify.app/",
     featured: true
@@ -22,7 +22,7 @@ const projects: Project[] = [
   {
     title: "Library website",
     description: "A modern digital library platform built with Next.js and React, allowing users to browse, search, and explore books through a fast, responsive, and user-friendly interface",
-    image: "/library.png",
+    image: "/Library.png",
     technologies: ["Next.js", "React", "JavaScript", "tailwindcss","database"],
     githubUrl: "https://github.com/MohamedNawsany/Library-website",
     liveUrl: "https://library-website-nine.vercel.app/",
